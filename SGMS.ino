@@ -67,7 +67,7 @@ void sendSensorData() {
     Serial.println("Plant recovered alert sent!");
   }
 
-  // 🌡️ TEMPERATURE ALERTS
+  //TEMPERATURE ALERTS
   if (t > 35 && !tempAlertSent) {
     Blynk.logEvent("heat_alert", " HEAT WARNING: Temperature " + String(t) + "°C! Move plant to cooler area.");
     tempAlertSent = true;
