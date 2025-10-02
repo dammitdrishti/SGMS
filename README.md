@@ -7,28 +7,28 @@ A low-cost, IoT-based solution for monitoring plant health in real-time. This sy
 ## 🚀 Demo Video
 [![Demo Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtube.com/shorts/your-video-id)
 
-## ✨ Features
+## Features
 - **Real-time Soil Moisture Monitoring**
 - **Temperature & Humidity Tracking**
-- **Mobile App Notifications** when plants need water
-- **Cloud Dashboard** for data visualization
+- **Mobile App Notifications** via email when plants need water
+- **Cloud Dashboard** for data visualization using Blynk iot platform and app
 - **Low-cost & Easy to Setup**
 
-## 🛠️ Hardware Components
+##  Hardware Components
 - NodeMCU ESP8266
 - Capacitive Soil Moisture Sensor
 - DHT11 Temperature/Humidity Sensor
-- Breadboard & Jumper Wires
+- Breadboard (optional )& Jumper Wires
 - USB Cable
 - Plant Pot with Soil
 
-## 📋 Prerequisites
+## Prerequisites
 - Arduino IDE installed
 - ESP8266 board support package
-- Blynk/ThingSpeak account
-- Wi-Fi credentials
+- Blynk account as used in this project but we can also use thingspeak 
+- Wi-Fi credentials - 2.4Ghz
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 ### 1. Hardware Connections
 | Sensor | NodeMCU Pin |
@@ -40,12 +40,9 @@ A low-cost, IoT-based solution for monitoring plant health in real-time. This sy
 
 ### 2. Software Setup
 1. Clone this repository
-2. Open `src/smart_gardening.ino` in Arduino IDE
-3. Install required libraries:
-   - Blynk library
-   - DHT sensor library
-4. Configure your Wi-Fi credentials and Blynk auth token
-5. Upload the code to NodeMCU
+2. Open `SGMS.ino` in Arduino IDE
+3. Configure your Wi-Fi credentials and Blynk auth token
+4. Upload the code to NodeMCU
 
 ### 3. Mobile App Setup
 1. Download Blynk IoT app
@@ -55,14 +52,14 @@ A low-cost, IoT-based solution for monitoring plant health in real-time. This sy
    - Display for temperature/humidity
    - Notification alert
 
-## 📸 Working Demo
+## Working Demo
 ![Circuit Setup](images/circuit_connection.jpg)
 *Hardware connections*
 
 ![Mobile App](images/mobile_app_screenshot.jpg)
 *Live data on Blynk app*
 
-![Working Model](images/working_demo.jpg)
+![Working Model](images/prototype.JPG)
 *Complete working system*
 
 ## How It Works
@@ -70,7 +67,7 @@ A low-cost, IoT-based solution for monitoring plant health in real-time. This sy
 2. NodeMCU processes the data and connects to Wi-Fi
 3. Data is sent to Blynk cloud via MQTT protocol
 4. Mobile app displays real-time values and graphs
-5. System triggers notifications when soil is dry
+5. System triggers notifications when soil is dry via email
 
 ## Code Overview
 The main code handles:
@@ -85,5 +82,3 @@ The main code handles:
 - **Efficiency**: Prevents over/under-watering
 - **Scalability**: Can monitor multiple plants
 
-## 👥 Team
--  - The Eighteens
